@@ -8,9 +8,9 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Read XML packages from Current Cost monitor and log power and temperature readings.')
 parser.add_argument('--device', metavar='DEV', default='/dev/ttyUSB0', 
-                    help='the serial device to read from')
+                    help='the serial device to read from, defaults to /dev/ttyUSB0')
 parser.add_argument('--raw', action='store_true',
-                    help='log raw data into a file raw.log')
+                    help='log raw received XML data into a file raw.log')
 parser.add_argument('--log', action='store_true',
                     help='write single line data points into a text file parsed.log')
 parser.add_argument('-o', '--stdout', action='store_true',
